@@ -1,5 +1,5 @@
-Brackets for Good -- Partners In Housing Scoreboard
-===
+# Partners In Housing Scoreboard
+### Brackets for Good
 
 My hacky Brackets for Good scoreboard for Partners In Housing.
 
