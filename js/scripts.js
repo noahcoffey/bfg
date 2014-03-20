@@ -9,13 +9,15 @@ $( document ).ready(function() {
     $.getJSON( "_fetchScore.php", function( data ) {
       $.each( data, function( key, val ) {
 
-        if ($('#' + key + '-score').text() != val) {
+        if ($('#' + key + '-score').text() != 0 && $('#' + key + '-score').text() != val) {
           console.log('Score change!');
           $('.' + key + '-player').addClass('animated tada');
           
           // Check if PIH change
           if (key == 'pih'){
             audioElement.play();
+          }else{
+            audioElement2.play();
           }
           
         }
@@ -48,12 +50,9 @@ $( document ).ready(function() {
 
   var audioElement = document.createElement('audio');
   audioElement.setAttribute('src', 'chaching.mp3');
-//  audioElement.setAttribute('autoplay', 'autoplay');
-  //audioElement.load()
-  $.get();
-  audioElement.addEventListener("load", function() {
-  
-  }, true);
+
+  var audioElement2 = document.createElement('audio');
+  audioElement2.setAttribute('src', 'aww.mp3');
 
     
 });
