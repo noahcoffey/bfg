@@ -12,6 +12,21 @@ h1 {
   border-radius: 8px;
 }
 
+.player .last-donation {
+  background-color: rgba(0,0,0,0.1);
+  padding: 10px 20px 5px 20px;
+}
+
+.player .last-donation h3 {
+  text-align: left;
+}
+
+.player .last-donation .amount {
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
 .winning {
   box-shadow: 0 0 40px -2px #20a911, 0 0 0 5px #20a911;
 }

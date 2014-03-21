@@ -2,6 +2,8 @@
 
 require_once 'unirest-php/lib/Unirest.php';
 
+$file = 'score.json';
+
 $response = Unirest::get("https://indianapolis.bracketsforgood.org/?citimark-division");
 
 //PIH
@@ -14,5 +16,5 @@ $res = explode('p1_entry_id":154,"p1_score":"', $response->body);
 $res = explode('","', $res[1]);
 $score['other'] = number_format($res[0]);
 
-print json_encode($score);
+file_put_contents($file, json_encode($score));
 

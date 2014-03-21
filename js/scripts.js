@@ -2,16 +2,20 @@ $( document ).ready(function() {
   
   updateScores();
   
-  setInterval( updateScores, 30000 );
-  setInterval( classCleanup, 5000 );
+  setInterval( updateScores, 5000 );
 
   function updateScores() {
-    $.getJSON( "_fetchScore.php", function( data ) {
+    $.getJSON( "score.json", function( data ) {
       $.each( data, function( key, val ) {
 
         if ($('#' + key + '-score').text() != 0 && $('#' + key + '-score').text() != val) {
           console.log('Score change!');
           $('.' + key + '-player').addClass('animated tada');
+          
+          lastDonation = val.replace(',','') - $('#' + key + '-score').text().replace(',','');
+          
+          
+          $('.' + key + '-player .last-donation .amount').text('$'+lastDonation);
           
           // Check if PIH change
           if (key == 'pih'){
@@ -28,6 +32,8 @@ $( document ).ready(function() {
 
       console.log('Scores updated.');
       updateLeader();
+
+      setTimeout( classCleanup, 4000 );
       
     });    
   }    

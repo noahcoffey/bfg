@@ -29,6 +29,10 @@
               <div class="logo"><img src="img/Partners_in_Housing.png" alt="Partners In Housing" /></div>
               <h2>Partners In Housing</h2>
               <div class="score" id="pih-score">0</div>
+              <div class="last-donation">
+                <div class="amount">?</div>
+                <h3>Last Donation</h3>
+              </div>
             </div>
           </li>
 
@@ -37,6 +41,10 @@
               <div class="logo"><img src="img/Joseph_Maley_Foundation.jpg" alt="Joseph Maley Foundation" /></div>
               <h2>Joseph Maley Foundation</h2>
               <div class="score" id="other-score">0</div>
+              <div class="last-donation">
+                <div class="amount">?</div>
+                <h3>Last Donation</h3>
+              </div>
             </div>
           </li>
         </ul>
