@@ -10,12 +10,12 @@ updateScore(50);
 
 
 function updateScore($sleep) {
-  
+
   sleep($sleep);
   
-  require_once 'unirest-php/lib/Unirest.php';
+  require_once dirname(__FILE__) . '/unirest-php/lib/Unirest.php';
 
-  $file = 'score.json';
+  $file = dirname(__FILE__) . '/score.json';
   
   $response = Unirest::get("https://indianapolis.bracketsforgood.org/?citimark-division");
   
@@ -28,8 +28,8 @@ function updateScore($sleep) {
   $res = explode('p1_entry_id":154,"p1_score":"', $response->body);
   $res = explode('","', $res[1]);
   $score['other'] = number_format($res[0]);
-  
+    
   file_put_contents($file, json_encode($score));
   
-  print "update. ";
+  print ".";
 }
