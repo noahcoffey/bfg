@@ -38,8 +38,8 @@
 
           <li>
             <div class="player other-player">
-              <div class="logo"><img src="img/Joseph_Maley_Foundation.jpg" alt="Joseph Maley Foundation" /></div>
-              <h2>Joseph Maley Foundation</h2>
+              <div class="logo"></div>
+              <h2 style="font-size: 28px;margin-bottom:20px">Exodus Refugee Immigration</h2>
               <div class="score" id="other-score">0</div>
               <div class="last-donation">
                 <div class="amount">?</div>
