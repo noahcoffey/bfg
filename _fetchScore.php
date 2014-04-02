@@ -25,7 +25,7 @@ function updateScore($sleep) {
   $score['pih'] = number_format($res[0]);
   
   //Other
-  $res = explode('p1_entry_id":140,"p1_score":"', $response->body);
+  $res = explode('p1_entry_id":148,"p1_score":"', $response->body);
   $res = explode('","', $res[1]);
   $score['other'] = number_format($res[0]);
     
