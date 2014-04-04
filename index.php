@@ -38,7 +38,7 @@
 
           <li>
             <div class="player other-player">
-              <div class="logo"></div>
+              <div class="logo"><img src="img/horizons.jpg" alt="Horizons" style="margin-top: 40px" /></div>
               <h2 style="font-size: 28px;margin-bottom:20px">Horizons</h2>
               <div class="score" id="other-score">0</div>
               <div class="last-donation">
